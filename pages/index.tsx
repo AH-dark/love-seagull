@@ -3,7 +3,6 @@ import Layouts from "@/layouts"
 import avatarImage from "@/assets/img/avatar.png"
 import Image from "next/image"
 import React, { useEffect } from "react"
-import { Card } from "flowbite-react"
 import { useDispatch } from "@/store"
 import { setTitle } from "@/store/reducers/view"
 
@@ -15,7 +14,11 @@ const Home: NextPage = () => {
 
     return (
         <Layouts className={"h-full"}>
-            <Card>
+            <div
+                className={
+                    "block p-6 w-full bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                }
+            >
                 <div className={"w-full flex flex-col items-center my-4 "}>
                     <div
                         className={
@@ -52,7 +55,7 @@ const Home: NextPage = () => {
                         他只能看到外表的辞藻堆砌，参不透其中深奥的精神内核，他整个人的层次就卡在这里了，只能度过一个相对失败的人生。
                     </p>
                 </div>
-            </Card>
+            </div>
         </Layouts>
     )
 }
