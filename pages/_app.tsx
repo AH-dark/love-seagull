@@ -1,4 +1,5 @@
 import React, { useMemo } from "react"
+import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import "@/styles/tailwind.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -8,7 +9,7 @@ import { useSelector } from "@/store"
 import config from "@/config"
 import { useRouter } from "next/router"
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+const App: NextPage<AppProps> = ({ Component, pageProps }) => {
     const viewState = useSelector((state) => state.view)
     const title = useMemo(
         () =>
