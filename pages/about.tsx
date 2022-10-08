@@ -1,12 +1,15 @@
 import React from "react"
 import { NextPage } from "next"
 import Layouts from "@/layouts"
-import { Card } from "flowbite-react"
 
 const About: NextPage = () => {
     return (
         <Layouts className={"h-full"}>
-            <Card>
+            <div
+                className={
+                    "block p-6 w-full bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                }
+            >
                 <div>
                     <h1 className={"text-2xl font-bold text-center"}>关于</h1>
                 </div>
@@ -109,7 +112,7 @@ const About: NextPage = () => {
                         。
                     </p>
                 </div>
-            </Card>
+            </div>
         </Layouts>
     )
 }
