@@ -1,6 +1,7 @@
 import React, { useMemo } from "react"
 import type { AppProps } from "next/app"
-import "styles/tailwind.css"
+import "@/styles/tailwind.css"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 import Head from "next/head"
 import wrapper from "@/store/wrapper"
 import { useSelector } from "@/store"

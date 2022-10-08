@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import type { PayloadAction } from "@reduxjs/toolkit"
+import { HYDRATE } from "next-redux-wrapper"
 
 export interface ViewState {
     title: string | null
@@ -30,6 +31,14 @@ const view = createSlice({
             }
 
             state.description = action.payload
+        },
+    },
+    extraReducers: {
+        [HYDRATE]: (state, action) => {
+            return {
+                ...state,
+                ...action.payload.auth,
+            }
         },
     },
 })

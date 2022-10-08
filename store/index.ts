@@ -14,8 +14,9 @@ const store = () =>
         devTools: process.env.NODE_ENV !== "production",
     })
 
-export type AppDispatch = ReturnType<typeof store>["dispatch"]
-export type RootState = ReturnType<ReturnType<typeof store>["getState"]>
+export type MakeStore = ReturnType<typeof store>
+export type AppDispatch = MakeStore["dispatch"]
+export type RootState = ReturnType<MakeStore["getState"]>
 
 export const useDispatch = () => useReduxDispatch<AppDispatch>()
 export const useSelector: TypedUseSelectorHook<RootState> = useReduxSelector

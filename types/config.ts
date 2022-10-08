@@ -1,4 +1,15 @@
 import { StaticImageData } from "next/image"
+import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome"
+
+export interface IconInfo {
+    icon: FontAwesomeIconProps["icon"]
+    href: string
+}
+
+export interface MenuInfo {
+    title: string
+    link: string
+}
 
 export default interface Config {
     // The name of the app
@@ -17,5 +28,17 @@ export default interface Config {
         type?: string
         // The language of the app
         locale?: string
+    }
+    navbar?: {
+        logo?: StaticImageData
+        title?: string
+        menus?: MenuInfo[]
+    }
+    footer?: {
+        copyright?: string
+        copyrightLink?: string
+        startYear?: number
+        icons?: IconInfo[]
+        menus?: MenuInfo[]
     }
 }

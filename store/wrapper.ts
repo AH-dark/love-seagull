@@ -1,7 +1,7 @@
 import { createWrapper } from "next-redux-wrapper"
-import store from "./index"
+import store, { MakeStore } from "./index"
 
-const wrapper = createWrapper(store, {
+const wrapper = createWrapper<MakeStore>(store, {
     debug: process.env.NODE_ENV !== "production",
     serializeState: (state) => state,
 })
