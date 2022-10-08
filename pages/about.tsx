@@ -7,7 +7,7 @@ const About: NextPage = () => {
         <Layouts className={"h-full"}>
             <div
                 className={
-                    "block p-6 w-full bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                    "block p-6 w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
                 }
             >
                 <div>
